@@ -7,6 +7,7 @@ const app = Vue.createApp({
     };
   },
   watch: {
+    // Watcher: Executes logic when the 'name' property changes
     name(value) {
       if (value === "") {
         this.fullname = "";
@@ -14,6 +15,7 @@ const app = Vue.createApp({
         this.fullname = value + " " + "Hello world";
       }
     },
+    // Watcher: Executes logic when 'lastName' changes
     lastName(value) {
       if (value === "") {
         this.fullname = "";
@@ -23,6 +25,7 @@ const app = Vue.createApp({
     },
   },
   computed: {
+    // Computed Property: Automatically updates when dependencies (this.name) change
     fullname() {
       console.log("Running again ...");
       if (this.name === "") {
@@ -38,6 +41,7 @@ const app = Vue.createApp({
       }
       return this.name + " " + "Hi world";
     },
+    // Updates the name property from the input event
     setName(event, lastName) {
       this.name = event.target.value;
     },

@@ -1,4 +1,5 @@
 const app = Vue.createApp({
+  // Data function returns the reactive state of the application
   data: function () {
     return {
       courseGoalA: "Finish the course",
@@ -8,6 +9,7 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    // Methods allow us to execute logic, often triggered by events
     outputGoal: function () {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
@@ -19,4 +21,5 @@ const app = Vue.createApp({
   },
 });
 
+// Mounts the Vue application to the DOM element with id 'user-goal'
 app.mount("#user-goal");

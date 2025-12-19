@@ -32,7 +32,8 @@
     </div>
     <form v-on:submit="submitHandler">
 
-      <input type="text">
+      <input type="text" v-on:input="setName($event, 'Vue')" />
+
 
 
       <button>Sign Up</button>
